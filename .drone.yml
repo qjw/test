@@ -2,6 +2,4 @@ pipeline:
   build:
     image: golang:1.6
     commands:
-      - go get
       - go build
-      - go test
