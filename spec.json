@@ -1,0 +1,37 @@
+{
+    "groups": [
+        {
+            "name": "产品线1",
+            "description": "产品abcdefgfjalkdsfjasfdjdsalkfjasldf",
+            "projects": [
+                {
+                    "name": "模块1",
+                    "description": "功能经费考虑撒点分房间里看的撒娇发了凯撒解放军撒离开的经费",
+                    "spec": "prod1/proj1.json"
+                },
+                {
+                    "name": "模块2",
+                    "description": "功能经费考虑撒点分房间里看的撒娇发了凯撒解放军撒离开的经费",
+                    "spec": "prod1/proj2.json"
+                }
+            ]
+        },
+        {
+            "name": "产品线2",
+            "description": "产品jfa发达abcdefgfjalkdsfjasfdjdsalkfjasldf",
+            "projects": [
+                {
+                    "name": "模块3",
+                    "description": "fadsf功能经费考虑撒点分房间里看的撒娇发了凯撒解放军撒离开的经费",
+                    "spec": "prod2/proj3.json"
+                },
+                {
+                    "name": "模块4",
+                    "description": "功能afads经费考虑撒点分房间里看的撒娇发了凯撒解放军撒离开的经费",
+                    "spec": "prod2/proj4.json"
+                }
+            ]
+        }
+    ]
+}
+

@@ -1,0 +1,973 @@
+{
+  "basePath": "/api/v123456",
+  "definitions": {},
+  "info": {
+    "description": "测试各",
+    "title": "产品线2 模块3",
+    "version": "v1"
+  },
+  "paths": {
+    "/10": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "description": "依赖关系",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "dependencies": {
+                "q2": [
+                  "q1"
+                ]
+              },
+              "properties": {
+                "q1": {
+                  "description": "q2依赖q2",
+                  "type": "string"
+                },
+                "q2": {
+                  "description": "q2依赖q2",
+                  "type": "boolean"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                },
+                "message": {
+                  "default": "ok",
+                  "description": "返回字符串描述",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "依赖关系",
+        "tags": [
+          "校验"
+        ]
+      }
+    },
+    "/11": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "description": "datetime",
+            "in": "query",
+            "internal": "datetime",
+            "name": "q1",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "手机号",
+            "in": "query",
+            "internal": "mobile",
+            "name": "q2",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "车牌号",
+            "in": "query",
+            "internal": "plate",
+            "name": "q3",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                },
+                "message": {
+                  "default": "ok",
+                  "description": "返回字符串描述",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "内建规则",
+        "tags": [
+          "内建规则扩展"
+        ]
+      }
+    },
+    "/12": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "custom": "CarColor",
+            "description": "汽车颜色",
+            "in": "query",
+            "name": "q1",
+            "required": false,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                },
+                "message": {
+                  "default": "ok",
+                  "description": "返回字符串描述",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "自定义规则",
+        "tags": [
+          "自定义规则"
+        ]
+      }
+    },
+    "/13": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "description": "100到101的整数",
+            "error": "必须是100到101的整数",
+            "in": "query",
+            "maximum": 101,
+            "minimum": 100,
+            "name": "q1",
+            "required": false,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                },
+                "message": {
+                  "default": "ok",
+                  "description": "返回字符串描述",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "自定义错误提示",
+        "tags": [
+          "自定义错误提示"
+        ]
+      }
+    },
+    "/14": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "description": "100到101的整数",
+            "error": "必须是100到101的整数",
+            "in": "query",
+            "maximum": 101,
+            "minimum": 100,
+            "name": "q1",
+            "required": false,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                },
+                "message": {
+                  "default": "ok",
+                  "description": "返回字符串描述",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "关闭校验",
+        "tags": [
+          "单个api关闭校验"
+        ]
+      }
+    },
+    "/15": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "description": "待上传的文件",
+            "in": "formData",
+            "name": "file",
+            "type": "file"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                },
+                "message": {
+                  "default": "ok",
+                  "description": "返回字符串描述",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "文件上传",
+        "tags": [
+          "文件上传"
+        ]
+      }
+    },
+    "/16": {
+      "get": {
+        "description": "",
+        "produces": [
+          "image/png",
+          "image/jpg",
+          "image/jpeg",
+          "image/gif"
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "summary": "图片下载",
+        "tags": [
+          "图片下载"
+        ]
+      }
+    },
+    "/6": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "description": "字符串长度限制",
+            "in": "query",
+            "maxLength": 6,
+            "minLength": 1,
+            "name": "q1",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "正则表达式",
+            "in": "query",
+            "name": "q2",
+            "pattern": "^1[3|4|5|7|8]\\d{9}$",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "default": "2017-9-15",
+            "description": "内建的date",
+            "format": "date",
+            "in": "query",
+            "name": "q3",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "default": "2017-04-13T14:34:23+00:00",
+            "description": "内建的datetime",
+            "format": "date-time",
+            "in": "query",
+            "name": "q4",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "default": "qjw@qiujinwu.com",
+            "description": "内建的email",
+            "format": "email",
+            "in": "query",
+            "name": "q5",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "description": "字符串枚举",
+            "enum": [
+              "str1",
+              "str2",
+              "str3"
+            ],
+            "in": "query",
+            "name": "q6",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                },
+                "message": {
+                  "default": "ok",
+                  "description": "返回字符串描述",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "字符串",
+        "tags": [
+          "校验"
+        ]
+      }
+    },
+    "/7": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "description": "整形区间1&lt;=x&lt;100，不包含最大的值",
+            "exclusiveMaximum": true,
+            "in": "query",
+            "maximum": 100,
+            "minimum": 0,
+            "name": "q1",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "default": "20",
+            "description": "必须是10的倍数",
+            "in": "query",
+            "multipleOf": 10,
+            "name": "q2",
+            "required": false,
+            "type": "integer"
+          },
+          {
+            "description": "浮点数",
+            "in": "query",
+            "name": "q3",
+            "required": false,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                },
+                "message": {
+                  "default": "ok",
+                  "description": "返回字符串描述",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "整形/浮点形",
+        "tags": [
+          "校验"
+        ]
+      }
+    },
+    "/8": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "description": "需要修改的内容",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "q1": {
+                  "description": "两个或者三个元素",
+                  "maxItems": 3,
+                  "minItems": 2,
+                  "type": "array"
+                },
+                "q2": {
+                  "default": [
+                    "1",
+                    "2"
+                  ],
+                  "description": "不能重复",
+                  "type": "array",
+                  "uniqueItems": true
+                },
+                "q3": {
+                  "description": "数组元素必须是整形",
+                  "items": {
+                    "type": "integer"
+                  },
+                  "type": "array"
+                },
+                "q4": {
+                  "description": "限定每个元素的schema",
+                  "items": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "default": "abcdefg",
+                      "type": "string"
+                    },
+                    {
+                      "enum": [
+                        "Street",
+                        "Avenue",
+                        "Boulevard"
+                      ],
+                      "type": "string"
+                    },
+                    {
+                      "enum": [
+                        "NW",
+                        "NE",
+                        "SW",
+                        "SE"
+                      ],
+                      "type": "string"
+                    }
+                  ],
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                },
+                "message": {
+                  "default": "ok",
+                  "description": "返回字符串描述",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "数组",
+        "tags": [
+          "校验"
+        ]
+      }
+    },
+    "/9": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "description": "2到3个元素，不能是未定义的key",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "additionalProperties": false,
+              "maxProperties": 3,
+              "minProperties": 2,
+              "properties": {
+                "q1": {
+                  "description": "可选",
+                  "type": "string"
+                },
+                "q2": {
+                  "description": "必选",
+                  "type": "boolean"
+                },
+                "q3": {
+                  "description": "可选",
+                  "type": "string"
+                },
+                "q4": {
+                  "description": "可选，可以是string或者null",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "q2"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                },
+                "message": {
+                  "default": "ok",
+                  "description": "返回字符串描述",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "对象",
+        "tags": [
+          "校验"
+        ]
+      }
+    },
+    "/car": {
+      "post": {
+        "description": "引用当前文件的json schema",
+        "parameters": [
+          {
+            "description": "ID",
+            "in": "formData",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                },
+                "data": {
+                  "properties": {
+                    "contact": {
+                      "description": "车辆型号",
+                      "properties": {
+                        "brand": {
+                          "default": "奔驰",
+                          "description": "汽车品牌",
+                          "type": "string"
+                        },
+                        "model": {
+                          "default": "尊贵型",
+                          "description": "汽车型号",
+                          "type": "string"
+                        },
+                        "series": {
+                          "default": "S600",
+                          "description": "汽车系列",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "brand"
+                      ],
+                      "type": "object"
+                    },
+                    "default": {
+                      "description": "是否已设置默认",
+                      "type": "boolean"
+                    }
+                  },
+                  "type": "object"
+                },
+                "message": {
+                  "default": "ok",
+                  "description": "返回字符串描述",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Form变量",
+        "tags": [
+          "参数"
+        ]
+      },
+      "put": {
+        "description": "引用当前文件的json schema",
+        "parameters": [
+          {
+            "description": "需要修改的内容",
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "properties": {
+                "car": {
+                  "description": "update",
+                  "properties": {
+                    "brand": {
+                      "default": "奔驰",
+                      "description": "汽车品牌",
+                      "type": "string"
+                    },
+                    "id": {
+                      "default": 1,
+                      "description": "ID",
+                      "type": "integer"
+                    },
+                    "model": {
+                      "default": "尊贵型",
+                      "description": "汽车型号",
+                      "type": "string"
+                    },
+                    "series": {
+                      "default": "S600",
+                      "description": "汽车系列",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "brand"
+                  ],
+                  "type": "object"
+                },
+                "default": {
+                  "default": true,
+                  "description": "是否设置默认",
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "car"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                },
+                "data": {
+                  "properties": {
+                    "contact": {
+                      "description": "车辆型号",
+                      "properties": {
+                        "brand": {
+                          "default": "奔驰",
+                          "description": "汽车品牌",
+                          "type": "string"
+                        },
+                        "model": {
+                          "default": "尊贵型",
+                          "description": "汽车型号",
+                          "type": "string"
+                        },
+                        "series": {
+                          "default": "S600",
+                          "description": "汽车系列",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "brand"
+                      ],
+                      "type": "object"
+                    },
+                    "default": {
+                      "description": "是否已设置默认",
+                      "type": "boolean"
+                    }
+                  },
+                  "type": "object"
+                },
+                "message": {
+                  "default": "ok",
+                  "description": "返回字符串描述",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Body(json)变量",
+        "tags": [
+          "参数"
+        ]
+      }
+    },
+    "/car/{id}": {
+      "get": {
+        "description": "引用其他文件的json schema",
+        "parameters": [
+          {
+            "description": "ID",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "description": "手机",
+            "error_tip": "请输入正确的客户手机",
+            "in": "query",
+            "name": "query1",
+            "pattern": "^1[3|4|5|7|8]\\d{9}$",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "最大100，最小1",
+            "error_tip": "请输入正确的数字，最大100，最小1",
+            "in": "query",
+            "maximum": 100,
+            "minimum": 1,
+            "name": "query2",
+            "redirect_url": "api.func2",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                },
+                "data": {
+                  "description": "车辆型号",
+                  "properties": {
+                    "brand": {
+                      "default": "奔驰",
+                      "description": "汽车品牌",
+                      "type": "string"
+                    },
+                    "model": {
+                      "default": "尊贵型",
+                      "description": "汽车型号",
+                      "type": "string"
+                    },
+                    "series": {
+                      "default": "S600",
+                      "description": "汽车系列",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "brand"
+                  ],
+                  "type": "object"
+                },
+                "message": {
+                  "default": "ok",
+                  "description": "返回字符串描述",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "query/path变量",
+        "tags": [
+          "参数"
+        ]
+      }
+    },
+    "/p": {
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "description": "fasdfasdf",
+            "in": "path",
+            "minLength": 1,
+            "name": "id",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": false,
+            "schema": {
+              "properties": {
+                "id": {
+                  "description": "fasdfasdf",
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                },
+                "message": {
+                  "default": "ok",
+                  "description": "返回字符串描述",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "PATH或者Body",
+        "tags": [
+          "参数"
+        ]
+      }
+    },
+    "/p/{id}": {
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "description": "fasdfasdf",
+            "in": "path",
+            "minLength": 1,
+            "name": "id",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": false,
+            "schema": {
+              "properties": {
+                "id": {
+                  "description": "fasdfasdf",
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id"
+              ],
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "properties": {
+                "code": {
+                  "default": 0,
+                  "description": "返回码",
+                  "type": "integer"
+                },
+                "message": {
+                  "default": "ok",
+                  "description": "返回字符串描述",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "summary": "PATH或者Body",
+        "tags": [
+          "参数"
+        ]
+      }
+    }
+  },
+  "securityDefinitions": {
+    "api_key1": {
+      "in": "header",
+      "name": "api_key1",
+      "type": "apiKey"
+    },
+    "api_key2": {
+      "in": "header",
+      "name": "api_key2",
+      "type": "apiKey"
+    }
+  },
+  "swagger": "2.0"
+}
