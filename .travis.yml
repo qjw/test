@@ -2,6 +2,9 @@ sudo: required
 
 lang: go
 
+go:
+  - "1.8"
+
 services:
   - docker
 
@@ -9,7 +12,7 @@ before_install:
   - go get -u github.com/kardianos/govendor
   - export PATH="${GOPATH}/bin:${PATH}"
   - export ROOT=/tmp/go_$$
-  - mkdir -p "${ROOT}" && ln -s "`pwd`" "${ROOT}/src" && cd "${ROOT}/src"
+  - mkdir -p "${ROOT}" && ln -s "`pwd`" "${ROOT}/src/domain/proj" && cd "${ROOT}/src/domain/proj"
   - pwd
   - find
   - echo ${ROOT}
