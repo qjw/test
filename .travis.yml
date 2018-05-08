@@ -7,7 +7,10 @@ services:
 
 before_install:
   - go get -u github.com/kardianos/govendor
-  - ${GOPATH}/pkg/govendor sync
+  - find ${GOPATH}
+  - export vendor=${GOPATH}/bin/govendor
+  - pwd
+  - ${vendor} sync
   - go build .
 
 script:
