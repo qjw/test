@@ -6,9 +6,10 @@ services:
   - docker
 
 before_install:
+  - go get -u github.com/kardianos/govendor
+  - find / -name govendor
   - go get github.com/qjw/kelly
   - go build .
-  - docker build -t doc-server:0.1 .
 
 script:
   - ls -a
