@@ -12,7 +12,8 @@ before_install:
   - go get -u github.com/kardianos/govendor
   - export PATH="${GOPATH}/bin:${PATH}"
   - export ROOT=/tmp/go_$$
-  - mkdir -p "${ROOT}" && ln -s "`pwd`" "${ROOT}/src/domain/proj" && cd "${ROOT}/src/domain/proj"
+  - export SUB_ROOT="${ROOT}/src/domain/"
+  - mkdir -p "${ROOT}" && ln -s "`pwd`" "${SUB_ROOT}/proj" && cd "${SUB_ROOT}/proj"
   - pwd
   - find
   - echo ${ROOT}
