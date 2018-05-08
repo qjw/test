@@ -1,0 +1,11 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"path": "github.com/qjw/kelly",
+			"revision": ""
+		}
+	],
+	"rootPath": "github.com/qjw/test"
+}
