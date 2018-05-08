@@ -14,14 +14,11 @@ before_install:
   - export ROOT=/tmp/go_$$
   - export SUB_ROOT="${ROOT}/src/domain/"
   - mkdir -p "${SUB_ROOT}" && ln -s "`pwd`" "${SUB_ROOT}/proj" && cd "${SUB_ROOT}/proj"
-  - pwd
-  - find
-  - echo ${ROOT}
-  - echo ${GOPATH}
   - export GOPATH="${ROOT}:${GOPATH}"
   - govendor sync
-  - find
   - go build .
-
+  - cd frontend
+  - npm i
+  - npm run-script build
 script:
   - ls -a
