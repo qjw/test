@@ -13,7 +13,7 @@ before_install:
   - export PATH="${GOPATH}/bin:${PATH}"
   - export ROOT=/tmp/go_$$
   - export SUB_ROOT="${ROOT}/src/domain/"
-  - mkdir -p "${ROOT}" && ln -s "`pwd`" "${SUB_ROOT}/proj" && cd "${SUB_ROOT}/proj"
+  - mkdir -p "${SUB_ROOT}" && ln -s "`pwd`" "${SUB_ROOT}/proj" && cd "${SUB_ROOT}/proj"
   - pwd
   - find
   - echo ${ROOT}
