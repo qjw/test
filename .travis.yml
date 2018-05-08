@@ -11,6 +11,9 @@ before_install:
   - export ROOT=/tmp/go_$$
   - mkdir -p "${ROOT}" && ln -s "`pwd`" "${ROOT}/src" && cd "${ROOT}/src"
   - pwd
+  - find
+  - echo ${ROOT}
+  - echo ${GOPATH}
   - export GOPATH="${ROOT}:${GOPATH}"
   - govendor sync
   - go build .
