@@ -1,0 +1,4 @@
+vendor/*/
+config/config_dev.json
+admin-web
+admin-web.exe

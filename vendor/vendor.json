@@ -3,8 +3,58 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "b4DmyMT9bicTRVJw1hJXHLhIH+0=",
+			"path": "github.com/go-playground/locales",
+			"revision": "f63010822830b6fe52288ee52d5a1151088ce039",
+			"revisionTime": "2018-03-23T16:04:04Z"
+		},
+		{
+			"checksumSHA1": "JgF260rC9YpWyY5WEljjimWLUXs=",
+			"path": "github.com/go-playground/locales/currency",
+			"revision": "f63010822830b6fe52288ee52d5a1151088ce039",
+			"revisionTime": "2018-03-23T16:04:04Z"
+		},
+		{
+			"checksumSHA1": "7QcjNTtW0Rc/5BPw1MPaQ6YNjso=",
+			"path": "github.com/go-playground/universal-translator",
+			"revision": "71201497bace774495daed26a3874fd339e0b538",
+			"revisionTime": "2017-03-27T19:17:03Z"
+		},
+		{
+			"checksumSHA1": "X7g98YfLr+zM7aN76AZvAfpZyfk=",
+			"path": "github.com/julienschmidt/httprouter",
+			"revision": "adbc77eec0d91467376ca515bc3a14b8434d0f18",
+			"revisionTime": "2018-04-11T15:45:01Z"
+		},
+		{
+			"checksumSHA1": "r708iEMQTy3Z0cYKyBtPvfoGSpM=",
 			"path": "github.com/qjw/kelly",
-			"revision": ""
+			"revision": "b7be542d9376594021bf920b02ea1d8267dbe386",
+			"revisionTime": "2018-04-13T14:23:47Z"
+		},
+		{
+			"checksumSHA1": "GXIgLWYUk6wEJM1QwAL9ox1xUb8=",
+			"path": "github.com/qjw/kelly/binding",
+			"revision": "b7be542d9376594021bf920b02ea1d8267dbe386",
+			"revisionTime": "2018-04-13T14:23:47Z"
+		},
+		{
+			"checksumSHA1": "2kejdxvKRwTsgP/vTj8BssVd5x4=",
+			"path": "github.com/qjw/kelly/render",
+			"revision": "b7be542d9376594021bf920b02ea1d8267dbe386",
+			"revisionTime": "2018-04-13T14:23:47Z"
+		},
+		{
+			"checksumSHA1": "wWhBVw5JhTUIbBstf20hucDfY/o=",
+			"path": "github.com/urfave/negroni",
+			"revision": "22c5532ea862c34fdad414e90f8cc00b4f6f4cab",
+			"revisionTime": "2018-01-30T04:45:49Z"
+		},
+		{
+			"checksumSHA1": "mmcb1GRVNcODUl98QY0RYf1fUdM=",
+			"path": "gopkg.in/go-playground/validator.v9",
+			"revision": "ee0bbdea519c2c66777c6bfc943838291734ba6c",
+			"revisionTime": "2018-05-05T16:24:17Z"
 		}
 	],
 	"rootPath": "github.com/qjw/test"

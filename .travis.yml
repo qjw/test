@@ -7,6 +7,9 @@ services:
 
 before_install:
   - go get -u github.com/kardianos/govendor
+  - echo ${GOPATH}
+  - ls ${GOPATH}/bin/govendor
+  - ${GOPATH}/bin/govendor sync
   - find / -name govendor
   - go get github.com/qjw/kelly
   - go build .
