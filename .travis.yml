@@ -6,7 +6,8 @@ services:
   - docker
 
 before_install:
-  - go get -t ./...
+  - go get -u github.com/kardianos/govendor
+  - ${GOPATH}/pkg/govendor sync
   - go build .
 
 script:
