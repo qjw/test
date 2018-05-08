@@ -1,7 +1,17 @@
 package main
-
-import "fmt"
+import (
+    "github.com/qjw/kelly"
+    "net/http"
+)
 
 func main(){
-	fmt.Print("hello world1")
+    router := kelly.New()
+
+    router.GET("/", func(c *kelly.Context) {
+        c.WriteIndentedJson(http.StatusOK, kelly.H{
+            "code":    "0",
+        })
+    })
+
+    router.Run(":9090")
 }
