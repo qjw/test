@@ -16,6 +16,7 @@ before_install:
   - echo ${GOPATH}
   - export GOPATH="${ROOT}:${GOPATH}"
   - govendor sync
+  - find
   - go build .
 
 script:
